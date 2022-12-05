@@ -1,15 +1,23 @@
 .what {
-    @include section(0, 94px);
+  @media screen and (max-width:1199px) {
+    display: none;
+  }
+        @include section(0, 94px);
   }
   
   .what__title, .team__title, .clients__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: calc(42 / 36);
+    font-size: 28px;
+    line-height: calc(33 / 28);
     letter-spacing: 0.03em;
     text-align: center;
     color: var(--secondary-text-color);
     margin-bottom: 50px;
+
+    @media screen and (min-width:1200px) {
+      font-size: 36px;
+      line-height: calc(42 / 36);
+    }
+
   }
   
   .what__list {
@@ -36,7 +44,6 @@
   }
   
   .what__text {
-    text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: calc(16 / 14);

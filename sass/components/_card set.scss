@@ -1,0 +1,18 @@
+.card__set {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--margin);
+}
+
+.card__set--item {
+    flex-basis: calc((100% - var(--margin) * (var(--item) - 1)) / var(--item));
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - var(--margin) * (var(--item) - 1)) / var(--item));
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - var(--margin) * (var(--item) - 1)) / var(--item));
+    }
+}

@@ -1,19 +1,28 @@
 .clients {
-  @include section(94px, 94px);
+  @include section(60px, 60px);
+  
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px);
+  }
   }
   
   .clients__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+    --item:2;
+
+    @media screen and (min-width: 768px) {
+      --item:3;
+    }
+
+    @media screen and (min-width: 1200px) {
+      --item:6;
+    }
   }
   
   .clients__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid var(--icons-background-color);
     border-radius: 4px;
@@ -26,5 +35,13 @@
     &:focus {
     fill: var(--third-text-color);
     border: 1px solid var(--third-text-color);
+    }
+
+    @media screen and (min-width:768px) {
+      width: 226px;
+    }
+
+    @media screen and (min-width:1200px) {
+      width: 170px;
     }
   }

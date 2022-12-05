@@ -1,40 +1,48 @@
 .special {
-  @include section(115px, 94px);
+  @include section(60px, 60px);
+  
+  @media screen and (min-width: 1200px) {
+    @include section(115px, 94px);
+  }
   }
   
   .special__list {
-    display: flex;
-    justify-content: space-between;
+    @media screen and (min-width: 768px) {
+      --item:2;
+    }
+
+    @media screen and (min-width: 1200px) {
+      --item:4;
+    }
   }
-  
-  .special__item:not(:last-child) {
-    margin-right: 30px;
-  }
-  
+
   .special__box {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 270px;
     height: 120px;
     background-color: var(--secondary-background-color);
     margin-bottom: 30px;
   }
   
   .special__title {
-    font-weight: 700;
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--secondary-text-color);
     margin-bottom: 10px;
+
+    @media screen and (max-width: 765px) {
+      text-align: center;
+    }
   }
   
   .special__text {
-    width: 270px;
     font-size: 14px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
   }
+
+  

@@ -1,37 +1,67 @@
 .footer {
   @include section(60px, 60px);
   background-color: var(--third-background-color);
+   
+  
+  outline: 2px solid red;
+    outline-offset: -2px;
 }
 
-.footer__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
 
-  @extend %container;
+
+.footer__container {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  
+  @media screen and (min-width:768px) {
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width:1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;  
+  }
+  
+  
 }
 
 .footer__credentials {
-  display: flex;
-  justify-content: left;
+  @media screen and (min-width:768px) {
+    display: flex;
+  justify-content: space-around;
   align-items: baseline;
+  }
+
+  @media screen and (min-width:1200px) {
+    display: flex;
+    align-items: baseline;
+  }
+  
 }
 
 .address {
-  font-style: normal;
-  margin-top: 20px;
+  @media screen and (max-width:1199px) {
+    margin-bottom: 60px;
+  }
+ 
+  @media screen and (min-width:1200px){
+  
   margin-right: 70px;
-}
-
-.address__list {
-  width: 231px;
+  }
+  margin-top: 20px;
+  font-style: normal;
 }
 
 .address__link {
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
-  margin-bottom: 9px;
   color: var(--white-color);
 
   transition: color var(--anim-main);
@@ -69,7 +99,10 @@
 
 .group__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  @media screen and (max-width:1199px) {
+    margin-bottom: 60px;
+  }
 }
 
 .group__item:not(:last-child) {
@@ -84,9 +117,7 @@
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-
   transition: background-color var(--anim-main);
-
   &:hover,
   &:focus {
   background-color: var(--third-text-color);
@@ -98,14 +129,23 @@
 }
 
 .pidpyska__form {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width:1200px) {
+    display: flex;
+    align-items: center;
+  }
+  
 }
 
 .pidpyska__field {
+  @media screen and(max-width:1199px) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
   width: 358px;
   height: 50px;
-  margin-right: 12px;
+  @media screen and (min-width:1200px) {
+    margin-right: 12px;
+  } 
   padding: 16px;
   color: var(--white-color);
   outline: unset;
@@ -124,7 +164,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 200px;
+    width: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30/16);
@@ -136,6 +176,11 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+
+  @media screen and (max-width:1199px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   &:hover, 
   &:focus {
