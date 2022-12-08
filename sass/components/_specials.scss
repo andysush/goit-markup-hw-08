@@ -4,6 +4,7 @@
   @media screen and (min-width: 1200px) {
     @include section(115px, 94px);
   }
+    @extend %container;
   }
   
   .special__list {
@@ -33,7 +34,7 @@
     color: var(--secondary-text-color);
     margin-bottom: 10px;
 
-    @media screen and (max-width: 765px) {
+    @media screen and (max-width: 767px) {
       text-align: center;
     }
   }

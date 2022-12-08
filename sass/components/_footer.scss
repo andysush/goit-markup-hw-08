@@ -1,10 +1,6 @@
 .footer {
   @include section(60px, 60px);
   background-color: var(--third-background-color);
-   
-  
-  outline: 2px solid red;
-    outline-offset: -2px;
 }
 
 
@@ -24,8 +20,7 @@
     justify-content: space-between;
     align-items: baseline;
     width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;  
+    
   }
   
   
@@ -164,7 +159,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-    width: 200px;
+  width: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30/16);

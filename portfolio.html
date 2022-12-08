@@ -19,16 +19,24 @@
     <!-- HEADER -->
     <header class="header">
       <div class="header__container">
-        <nav class="nav">
-          <a href="./index.html" class="logo"
-            >Web<span class="logo__header">Studio</span></a
-          >
+        <a href="./index.html" class="logo"
+            >Web<span class="logo__header">Studio</span>
+        </a>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+          <svg class="mob__open" width="40px" height="40px">
+            <use href="./images/icons.svg#icon-mob_open"></use>
+          </svg>
+        </button>
+        <nav class="nav">  
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="./index.html">Студія</a>
+              <a class="nav__link nav__link--current" href="./index.html">Студія</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link nav__link--current" href="./portfolio.html"
+              <a class="nav__link" href="./portfolio.html"
                 >Портфоліо</a
               >
             </li class="nav__item">
@@ -59,7 +67,7 @@
     <main>
       <!-- PORTFOLIO -->
       <section class="portfolio">
-        <div class=" container">
+        <div>
           <h1 class="visually-hidden">portfolio</h1>
         <ul class="btn__list">
           <li class="btn__item">

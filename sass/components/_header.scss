@@ -1,23 +1,36 @@
 .header {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #ececec;
   }
   
   .header__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    @media screen and (min-width:768px) and (max-width:1199px) {
+    justify-content: space-between;  
+    }
 
     @extend %container;
   }
   
   .nav {
-    display: flex;
-    align-items: baseline;
+    @media screen and (min-width:1200px) {
+      display: flex;
+      align-items: baseline;
+    }
   }
-  .nav__list, .contact {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+  .nav__list {
+    @media screen and (max-width:767.9px) {
+      display: none;
+    }
+    
+    @media screen and (min-width:768px) {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
   }
 
   .nav__link {
@@ -58,6 +71,19 @@
     position: relative;
   }
   
+  .contact {
+    display: none;
+    @media screen and (min-width:768px) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media screen and (min-width:1200px) {
+      flex-direction: row;
+      gap: 30px;
+      margin-left: auto;
+    }
+  }
+
   .contact__link {
     display: flex;
     justify-content: center;
@@ -67,7 +93,10 @@
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
-    padding: 32px 0;
+    padding: 10px 0;
+    @media screen and (min-width:1200px) {
+      padding: 32px 0;
+    }
     color: var(--primary-text-color);
   
     transition: color var(--anim-main);

@@ -11,7 +11,9 @@
   }
   .logo__header {
     color: var(--black-color);
-    margin-right: 93px;
+    @media screen and (min-width:1200px) {
+      margin-right: 92px;
+    }
   }
 
   .logo__footer {

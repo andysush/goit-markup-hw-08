@@ -2,7 +2,9 @@
   @media screen and (max-width:1199px) {
     display: none;
   }
-        @include section(0, 94px);
+     @include section(0, 94px);
+
+     @extend %container;
   }
   
   .what__title, .team__title, .clients__title {

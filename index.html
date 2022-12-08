@@ -18,12 +18,20 @@
 
   <body>
     <!-- HEADER -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__container">
-        <nav class="nav">
-          <a href="./index.html" class="logo"
-            >Web<span class="logo__header">Studio</span></a
-          >
+        <a href="./index.html" class="logo"
+            >Web<span class="logo__header">Studio</span>
+        </a>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+          <svg class="mob__open" width="40px" height="40px">
+            <use href="./images/icons.svg#icon-mob_open"></use>
+          </svg>
+        </button>
+        <nav class="nav">  
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link nav__link--current" href="./index.html">Студія</a>
@@ -55,12 +63,12 @@
           </li>
         </ul>
       </div>
-    </header> -->
+    </header>
     <!-- MAIN -->
     <main>
       <!-- HERO -->
       <section class="hero">
-        <div class="container">
+        <div>
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button class="hero__button" type="button" data-modal-open>
             Замовити послугу
@@ -69,7 +77,7 @@
       </section>
       <!-- SPECIALS -->
       <section class="special">
-        <div class="container">
+        <div>
           <h2 class="visually-hidden">Особливості</h2>
           <ul class="special__list card__set">
             <li class="special__item card__set--item">
@@ -124,38 +132,44 @@
       </section>
       <!-- WHAT -->
       <section class="what">
-        <div class="container">
+        <div>
           <h2 class="what__title">Чим ми займаємося</h2>
           <ul class="what__list">
             <li class="what__item">
               <img
-                src="./images/chim1.jpg"
-                alt="Програмування"
-                width="370"
-                height="294"
-              />
+                  srcset="./images/what/img1_com@1x.jpg 1x, ./images/what/img1_com@2x.jpg 2x"
+                  src="./images/what/img1_com@1x.jpg"
+                  alt="Програмування"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
               <div class="what__overlay">
                 <p class="what__text">Десктопні додатки</p>
               </div>
             </li>
             <li class="what__item">
               <img
-                src="./images/chim2.jpg"
-                alt="Розробка макетів"
-                width="370"
-                height="294"
-              />
+                  srcset="./images/what/img2_com@1x.jpg 1x, ./images/what/img2_com@2x.jpg 2x"
+                  src="./images/what/img2_com@1x.jpg"
+                  alt="Розробка макетів"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
               <div class="what__overlay">
                 <p class="what__text">Мобільні додатки</p>
               </div>
             </li>
             <li class="what__item">
               <img
-                src="./images/chim3.jpg"
-                alt="Дизайн"
-                width="370"
-                height="294"
-              />
+                  srcset="./images/what/img3_com@1x.jpg 1x, ./images/what/img3_com@2x.jpg 2x"
+                  src="./images/what/img3_com@1x.jpg"
+                  alt="Дизайн"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
               <div class="what__overlay">
                 <p class="what__text">Дизайнерські рішення</p>
               </div>
@@ -165,16 +179,34 @@
       </section>
       <!-- TEAM -->
       <section class="team">
-        <div class="container">
+        <div>
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list card__set">
             <li class="team__item card__set--item">
-              <img
-                src="./images/igor.jpg"
-                alt="photo-igor"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img1_com@1x.jpg 1x, ./images/team/img1_com@2x.jpg 2x" 
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img1_tab@1x.jpg 1x, ./images/team/img1_tab@2x.jpg 2x"
+                />
+                <!-- phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img1_mob@1x.jpg 1x, ./images/team/img1_mob@2x.jpg 2x"
+                />
+                <img
+                  src="./images/team/img1_tab@1x.jpg"
+                  alt="photo-igor"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__box">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__text" lang="en">Product Designer</p>
@@ -230,12 +262,30 @@
               </div>
             </li>
             <li class="team__item card__set--item">
-              <img
-                src="./images/olga.jpg"
-                alt="photo-olga"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img2_com@1x.jpg 1x, ./images/team/img2_com@2x.jpg 2x" 
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img2_tab@1x.jpg 1x, ./images/team/img2_tab@2x.jpg 2x"
+                />
+                <!-- phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img2_mob@1x.jpg 1x, ./images/team/img2_mob@2x.jpg 2x"
+                />
+                <img
+                  src="./images/team/img2_tab@1x.jpg"
+                  alt="photo-olga"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__box">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p class="team__text" lang="en">Frontend Developer</p>
@@ -291,12 +341,30 @@
               </div>
             </li>
             <li class="team__item card__set--item">
-              <img
-                src="./images/mykola.jpg"
-                alt="photo-mykola"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img3_com@1x.jpg 1x, ./images/team/img3_com@2x.jpg 2x" 
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img3_tab@1x.jpg 1x, ./images/team/img3_tab@2x.jpg 2x"
+                />
+                <!-- phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img3_mob@1x.jpg 1x, ./images/team/img3_mob@2x.jpg 2x"
+                />
+                <img
+                  src="./images/team/img3_tab@1x.jpg"
+                  alt="photo-mykola"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__box">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__text" lang="en">Marketing</p>
@@ -353,12 +421,30 @@
               </div>
             </li>
             <li class="team__item card__set--item">
-              <img
-                src="./images/mykhailo.jpg"
-                alt="photo-mykhailo"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img4_com@1x.jpg 1x, ./images/team/img4_com@2x.jpg 2x" 
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img4_tab@1x.jpg 1x, ./images/team/img4_tab@2x.jpg 2x"
+                />
+                <!-- phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img4_mob@1x.jpg 1x, ./images/team/img4_mob@2x.jpg 2x"
+                />
+                <img
+                  src="./images/team/img4_tab@1x.jpg"
+                  alt="photo-mykhailo"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__box">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__text" lang="en">UI Designer</p>
@@ -419,7 +505,7 @@
       </section>
       <!-- Postiyni Clienty -->
       <section class="clients">
-        <div class="container">
+        <div>
           <h2 class="clients__title">Постійні клієнти</h2>
           <ul class="clients__list card__set">
             <li class="clients__item card__set--item">
@@ -592,9 +678,9 @@
           </form>
         </div>
       </div>
-    </footer> -->
-    <!-- MODAL WINDOW
-<!-- <div class="backdrop backdrop--is-hidden" data-modal>
+    </footer>
+    <!-- MODAL WINDOW -->
+<div class="backdrop backdrop--is-hidden" data-modal>
   <div class="modal">
     <button class="modal__btn" data-modal-close>
       <svg width="18px" height="18px">
@@ -640,7 +726,48 @@
         <button class="modal-form__button" type="submit">Відправити</button>
       </form>
   </div>
-</div> -->
+</div>
+<!-- MOBILE MENU -->
+<div class="menu-container js-menu-container" id="mobile-menu">
+  <button class="menu-toggle menu__close js-close-menu">
+    <svg class="menu__icon" width="40px" height="40px">
+      <use href="./images/icons.svg#icon-mob_close"></use>
+    </svg>
+  </button>
+
+  <ul class="menu-list">
+    <li class="menu-list__item menu-list__item--current"><a class="menu-list__link" href="./index.html">Студія</a></li>
+    <li class="menu-list__item"><a class="menu-list__link" href="./portfolio.html">Портфоліо</a></li>
+    <li class="menu-list__item"><a class="menu-list__link" href="#">Контакти</a></li>
+  </ul>
+  <ul class="menu-contact">
+    <li class="menu-contact__item"><a class="menu-contact__link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+    <li class="menu-contact__items"><a class="menu-contact__link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+    
+  </ul>
+  <ul class="menu-social">
+    <li class="menu-social__item"><a class="menu-social__link" href="https://www.instagram.com/"
+      target="_blank"
+      rel="noopener noreferrer">Instagram</a></li>
+    <li class="menu-social__item"><a class="menu-social__link" href="https://twitter.com/"
+      target="_blank"
+      rel="noopener noreferrer">Twitter</a></li>
+    <li class="menu-social__item"><a class="menu-social__link" href="https://www.facebook.com/"
+      target="_blank"
+      rel="noopener noreferrer">Facebook</a></li>
+    <li class="menu-social__item"><a class="menu-social__link" href="https://www.linkedin.com/"
+      target="_blank"
+      rel="noopener noreferrer">LinkedIn</a></li>
+  </ul>
+</div>
+
 <script src="./js/modal.js"></script>
+<script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
