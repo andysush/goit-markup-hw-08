@@ -1,9 +1,8 @@
 .footer {
   @include section(60px, 60px);
   background-color: var(--third-background-color);
+  @extend %container;
 }
-
-
 
 .footer__container {
   @media screen and (max-width: 1199px) {
@@ -11,7 +10,7 @@
   }
   
   @media screen and (min-width:768px) {
-    width: 768px;
+    width: 738px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -19,11 +18,8 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    width: 1200px;
-    
+    width: 1170px;
   }
-  
-  
 }
 
 .footer__credentials {
@@ -37,7 +33,6 @@
     display: flex;
     align-items: baseline;
   }
-  
 }
 
 .address {
@@ -46,7 +41,6 @@
   }
  
   @media screen and (min-width:1200px){
-  
   margin-right: 70px;
   }
   margin-top: 20px;
@@ -128,7 +122,6 @@
     display: flex;
     align-items: center;
   }
-  
 }
 
 .pidpyska__field {
@@ -136,9 +129,10 @@
     width: 450px;
     margin-bottom: 20px;
   }
-  width: 358px;
-  height: 50px;
+  
   @media screen and (min-width:1200px) {
+    width: 358px;
+    height: 50px;
     margin-right: 12px;
   } 
   padding: 16px;

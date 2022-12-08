@@ -55,24 +55,24 @@ img {
   margin: -1px;
 }
 
-.portfolio, .clients, .team, .what, .special, .header__container {
+.portfolio, .footer, .clients, .team, .what, .special, .header__container {
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 480px) {
-  .portfolio, .clients, .team, .what, .special, .header__container {
+  .portfolio, .footer, .clients, .team, .what, .special, .header__container {
     width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .portfolio, .clients, .team, .what, .special, .header__container {
+  .portfolio, .footer, .clients, .team, .what, .special, .header__container {
     width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .portfolio, .clients, .team, .what, .special, .header__container {
+  .portfolio, .footer, .clients, .team, .what, .special, .header__container {
     width: 1200px;
   }
 }
@@ -629,7 +629,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__container {
-    width: 768px;
+    width: 738px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -645,7 +645,7 @@ body {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    width: 1200px;
+    width: 1170px;
   }
 }
 
@@ -777,8 +777,6 @@ body {
 }
 
 .pidpyska__field {
-  width: 358px;
-  height: 50px;
   padding: 16px;
   color: var(--white-color);
   outline: unset;
@@ -798,6 +796,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .pidpyska__field {
+    width: 358px;
+    height: 50px;
     margin-right: 12px;
   }
 }
