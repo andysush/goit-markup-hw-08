@@ -1,18 +1,20 @@
 .header {
     position: relative;
-    padding-top: 16px;
-    padding-bottom: 16px;
     border-bottom: 1px solid #ececec;
   }
   
   .header__container {
     display: flex;
     align-items: center;
-    @media screen and (min-width:768px) and (max-width:1199px) {
+    @media screen and (min-width:768px) and (max-width:1199.9px) {
     justify-content: space-between;  
     }
-
     @extend %container;
+
+    @media screen and (max-width:767.9px) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
   }
   
   .nav {

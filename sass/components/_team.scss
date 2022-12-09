@@ -1,12 +1,15 @@
 .team {
+    background-color: var(--secondary-background-color);
+  }
+
+.team__container {
+  @extend %container;
   @include section(60px, 60px);
   
   @media screen and (min-width: 1200px) {
     @include section(94px, 94px);
   }
-    @extend %container;
-    background-color: var(--secondary-background-color);
-  }
+}
   
   .team__list {
     @media screen and (min-width: 768px) {

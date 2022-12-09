@@ -55,24 +55,24 @@ img {
   margin: -1px;
 }
 
-.portfolio, .footer, .clients, .team, .what, .special, .header__container {
+.portfolio, .footer__container, .clients__container, .team__container, .what-container, .special__container, .hero__container, .header__container {
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 480px) {
-  .portfolio, .footer, .clients, .team, .what, .special, .header__container {
+  .portfolio, .footer__container, .clients__container, .team__container, .what-container, .special__container, .hero__container, .header__container {
     width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .portfolio, .footer, .clients, .team, .what, .special, .header__container {
+  .portfolio, .footer__container, .clients__container, .team__container, .what-container, .special__container, .hero__container, .header__container {
     width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .portfolio, .footer, .clients, .team, .what, .special, .header__container {
+  .portfolio, .footer__container, .clients__container, .team__container, .what-container, .special__container, .hero__container, .header__container {
     width: 1200px;
   }
 }
@@ -83,8 +83,6 @@ body {
 
 .header {
   position: relative;
-  padding-top: 16px;
-  padding-bottom: 16px;
   border-bottom: 1px solid #ececec;
 }
 
@@ -96,11 +94,17 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.9px) {
   .header__container {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .header__container {
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
@@ -249,9 +253,8 @@ body {
   color: var(--white-color);
 }
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
   max-width: 1600px;
+  height: 400px;
   margin: 0 auto;
   background-color: #C4C4C4;
   background-repeat: no-repeat;
@@ -293,6 +296,16 @@ body {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Img_com@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Img_com@2x.jpg);
   }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+  }
+}
+
+.hero__container {
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero__title {
@@ -343,12 +356,12 @@ body {
   background-color: var(--button-active-color);
 }
 
-.special {
+.special__container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
-  .special {
+  .special__container {
     padding-top: 115px;
     padding-bottom: 94px;
   }
@@ -401,14 +414,15 @@ body {
   color: var(--primary-text-color);
 }
 
-.what {
-  padding-top: 0;
-  padding-bottom: 94px;
-}
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.9px) {
   .what {
     display: none;
   }
+}
+
+.what-container {
+  padding-top: 0;
+  padding-bottom: 94px;
 }
 
 .what__title, .team__title, .clients__title {
@@ -461,12 +475,15 @@ body {
 }
 
 .team {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: var(--secondary-background-color);
 }
+
+.team__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 @media screen and (min-width: 1200px) {
-  .team {
+  .team__container {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -558,12 +575,12 @@ body {
   fill: var(--white-color);
 }
 
-.clients {
+.clients__container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
-  .clients {
+  .clients__container {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -617,12 +634,14 @@ body {
 }
 
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: var(--third-background-color);
 }
 
-@media screen and (max-width: 1199px) {
+.footer__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (max-width: 1199.9px) {
   .footer__container {
     text-align: center;
   }
@@ -676,7 +695,7 @@ body {
   margin-top: 20px;
   font-style: normal;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.9px) {
   .address {
     margin-bottom: 60px;
   }
@@ -730,7 +749,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.9px) {
   .group__list {
     margin-bottom: 60px;
   }
@@ -788,7 +807,7 @@ body {
   -webkit-transition: border-color var(--anim-main);
   transition: border-color var(--anim-main);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.9px) {
   .pidpyska__field {
     width: 450px;
     margin-bottom: 20px;
@@ -830,7 +849,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.9px) {
   .pidpyska__button {
     margin-right: auto;
     margin-left: auto;

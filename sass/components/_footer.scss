@@ -1,11 +1,11 @@
 .footer {
-  @include section(60px, 60px);
   background-color: var(--third-background-color);
-  @extend %container;
 }
 
 .footer__container {
-  @media screen and (max-width: 1199px) {
+  @extend %container;
+  @include section(60px, 60px);
+  @media screen and (max-width: 1199.9px) {
     text-align: center;
   }
   
@@ -36,7 +36,7 @@
 }
 
 .address {
-  @media screen and (max-width:1199px) {
+  @media screen and (max-width:1199.9px) {
     margin-bottom: 60px;
   }
  
@@ -89,7 +89,7 @@
 .group__list {
   display: flex;
   justify-content: center;
-  @media screen and (max-width:1199px) {
+  @media screen and (max-width:1199.9px) {
     margin-bottom: 60px;
   }
 }
@@ -125,7 +125,7 @@
 }
 
 .pidpyska__field {
-  @media screen and(max-width:1199px) {
+  @media screen and(max-width:1199.9px) {
     width: 450px;
     margin-bottom: 20px;
   }
@@ -166,7 +166,7 @@
   border-radius: 4px;
   cursor: pointer;
 
-  @media screen and (max-width:1199px) {
+  @media screen and (max-width:1199.9px) {
     margin-right: auto;
     margin-left: auto;
   }

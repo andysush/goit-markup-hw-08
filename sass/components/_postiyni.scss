@@ -1,48 +1,43 @@
-.clients {
+.clients__container {
+  @extend %container;
   @include section(60px, 60px);
-  
+
   @media screen and (min-width: 1200px) {
     @include section(94px, 94px);
+}
+}
+.clients__list {
+  --item:2;
+  @media screen and (min-width: 768px) {
+    --item:3;
   }
-  @extend %container;
+  @media screen and (min-width: 1200px) {
+    --item:6;
   }
-  
-  .clients__list {
-    --item:2;
+}
 
-    @media screen and (min-width: 768px) {
-      --item:3;
-    }
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 92px;
+  border: 1px solid var(--icons-background-color);
+  border-radius: 4px;
+  fill:var(--icons-background-color);
 
-    @media screen and (min-width: 1200px) {
-      --item:6;
-    }
+  transition: fill var(--anim-main),
+  border var(--anim-main);
+
+  &:hover,
+  &:focus {
+  fill: var(--third-text-color);
+  border: 1px solid var(--third-text-color);
   }
-  
-  .clients__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 210px;
-    height: 92px;
-    border: 1px solid var(--icons-background-color);
-    border-radius: 4px;
-    fill:var(--icons-background-color);
-  
-    transition: fill var(--anim-main),
-    border var(--anim-main);
-  
-    &:hover,
-    &:focus {
-    fill: var(--third-text-color);
-    border: 1px solid var(--third-text-color);
-    }
-
-    @media screen and (min-width:768px) {
-      width: 226px;
-    }
-
-    @media screen and (min-width:1200px) {
-      width: 170px;
-    }
+  @media screen and (min-width:768px) {
+    width: 226px;
   }
+  @media screen and (min-width:1200px) {
+    width: 170px;
+  }
+}

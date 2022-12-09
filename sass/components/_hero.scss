@@ -1,6 +1,7 @@
 .hero {
-  @include section(200px, 200px);
+  
   max-width: 1600px;
+  height: 400px;
   margin: 0 auto;
   background-color: #C4C4C4;
   background-repeat: no-repeat;
@@ -33,6 +34,7 @@
 
   // Desktop screen
   @media screen and (min-width: 769px) {
+    
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero/Img_com@1x.jpg);
     // retina desktop screen
@@ -41,8 +43,16 @@
         url(../images/hero/Img_com@2x.jpg);
     }
   }
+  @media screen and (min-width: 1200px) {
+    height: 600px;
+  }
 }
   
+  .hero__container {
+    @extend %container;
+    @include section(200px, 200px);
+  }
+
   .hero__title {
     font-weight: 900;
     font-size: 26px;
