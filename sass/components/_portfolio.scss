@@ -1,17 +1,30 @@
-.portfolio {
-  @include section(94px, 94px);
-  @extend %container;
+ 
+  .portfolio__container {
+    @include section(60px, 60px);
+    @media screen and (min-width:1200px) {
+      @include section(94px, 94px);
+    }
+    @extend %container;
   }
-  
+
   .btn__list {
+    @media screen and (min-width:480px) and (max-width:767.9px){
+    width: 326px;
+    }
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-  
-  .btn__item:not(:last-child) {
-    margin-right: 8px;
+    justify-content: left;
+    gap: 8px;
+    margin-bottom: 40px;
+    @media screen and (min-width:768px) {
+      flex-wrap: nowrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width:1200px) {
+      margin-bottom: 50px;
+    }
   }
   
   .btn__portfolio {
@@ -27,7 +40,7 @@
     border-radius: 4px;
     cursor: pointer;
     padding: 6px 22px;
-  
+
     transition: color var(--anim-main),
     background-color var(--anim-main),
     box-shadow var(--anim-main);
@@ -40,14 +53,17 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
     }
   }
-  
-  .card-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
+
+  .card-list__item {
+    @media screen and (min-width: 768px) {
+      --item:2;
+    }
+
+    @media screen and (min-width: 1200px) {
+      --item:3;
+    }
   }
-  
+
   .card-list__link {
     display: block;
   

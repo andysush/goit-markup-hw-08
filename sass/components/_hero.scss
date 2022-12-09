@@ -1,7 +1,6 @@
 .hero {
   
   max-width: 1600px;
-  height: 400px;
   margin: 0 auto;
   background-color: #C4C4C4;
   background-repeat: no-repeat;
@@ -9,7 +8,7 @@
   background-size: cover;
   @media screen and (max-width:480px) {
     
-// Mobile screen
+  // Mobile screen
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero/img_mob@1x.jpg);
   // retina mobile screen
@@ -18,11 +17,8 @@
       url(../images/hero/img_mob@2x.jpg);
   }
   }
-  
-
   // Tablet screen
   @media screen and (min-width: 481px) {
-
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero/img_tab@1x.jpg);
     // retina tablet screen
@@ -42,15 +38,15 @@
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url(../images/hero/Img_com@2x.jpg);
     }
-  }
-  @media screen and (min-width: 1200px) {
-    height: 600px;
-  }
+  }  
 }
   
   .hero__container {
     @extend %container;
-    @include section(200px, 200px);
+    @include section(118px, 118px);
+    @media screen and (min-width:1200px) {
+      @include section(200px, 200px);
+    }
   }
 
   .hero__title {
