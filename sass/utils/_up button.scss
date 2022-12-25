@@ -3,22 +3,24 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    
+    fill: var(--third-background-color);
+ 
 }
 
 .up__button .up__arrow {
-    width: 50px;
-    height: 50px;
-    background: var(--primary-text-color);
+    width: 60px;
+    height: 60px;
+    background: var(--icons-background-color);
     text-align: center;
     display: block;
     line-height: 50px;
     border-radius: 50%;
-    color: var(--white-color);
     transition: var(--anim-main);
 
     &:hover,
     &:focus {
-        background: var(--third-text-color);
+       background: var(--third-text-color);
+       box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+       transform: translateY(-10px);
     }
 }
