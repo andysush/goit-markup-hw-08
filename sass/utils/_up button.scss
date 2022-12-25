@@ -1,0 +1,24 @@
+
+.up__arrow {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    
+}
+
+.up__button .up__arrow {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-text-color);
+    text-align: center;
+    display: block;
+    line-height: 50px;
+    border-radius: 50%;
+    color: var(--white-color);
+    transition: var(--anim-main);
+
+    &:hover,
+    &:focus {
+        background: var(--third-text-color);
+    }
+}
