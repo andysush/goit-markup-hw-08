@@ -1,114 +1,114 @@
 .header {
-    position: relative;
-    border-bottom: 1px solid #ececec;
-  }
-  
-  .header__container {
-    display: flex;
-    align-items: center;
-    @media screen and (min-width:768px) and (max-width:1199.9px) {
-    justify-content: space-between;  
-    }
-    @extend %container;
+	position: relative;
+	border-bottom: 1px solid #ececec;
+}
 
-    @media screen and (max-width:767.9px) {
-      padding-top: 16px;
-      padding-bottom: 16px;
-    }
-  }
-  
-  .nav {
-    @media screen and (min-width:1200px) {
-      display: flex;
-      align-items: baseline;
-    }
-  }
-  .nav__list {
-    @media screen and (max-width:767.9px) {
-      display: none;
-    }
-    
-    @media screen and (min-width:768px) {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-    }
-  }
+.header__container {
+	display: flex;
+	align-items: center;
+	@media screen and (min-width: 768px) and (max-width: 1199.9px) {
+		justify-content: space-between;
+	}
+	@extend %container;
 
-  .nav__link {
-    display: block;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.02em;
-    padding: 32px 0;
-    color: var(--secondary-text-color);
-  
-    transition: color var(--anim-main);
+	@media screen and (max-width: 767.9px) {
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+}
 
-    &:hover,
-    &:focus {
-    color: var(--third-text-color);
-    }
+.nav {
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		align-items: baseline;
+	}
+}
+.nav__list {
+	@media screen and (max-width: 767.9px) {
+		display: none;
+	}
 
-    &--current {
-        color: var(--third-text-color);
-    }
+	@media screen and (min-width: 768px) {
+		display: flex;
+		align-items: center;
+		gap: 50px;
+	}
+}
 
-    &--current::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%);
-    display: block;
-    width: 48px;
-    height: 4px;
-    background: var(--third-text-color);
-    border-radius: 2px;
-    }
-  }
-    
-  .nav__item {
-    position: relative;
-  }
-  
-  .contact {
-    display: none;
-    @media screen and (min-width:768px) {
-      display: flex;
-      flex-direction: column;
-    }
-    @media screen and (min-width:1200px) {
-      flex-direction: row;
-      gap: 30px;
-      margin-left: auto;
-    }
-  }
+.nav__link {
+	display: block;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: calc(16 / 14);
+	letter-spacing: 0.02em;
+	padding: 32px 0;
+	color: var(--secondary-text-color);
 
-  .contact__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.02em;
-    padding: 10px 0;
-    @media screen and (min-width:1200px) {
-      padding: 32px 0;
-    }
-    color: var(--primary-text-color);
-  
-    transition: color var(--anim-main);
-  
-   &:hover,
-   &link:focus {
-    color: var(--third-text-color);
-    }
-  }
-  
-  .contact__icon {
-    fill: currentColor;
-  }
+	transition: color var(--anim-main);
+
+	&:hover,
+	&:focus {
+		color: var(--third-text-color);
+	}
+
+	&--current {
+		color: var(--third-text-color);
+	}
+
+	&--current::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%);
+		display: block;
+		width: 48px;
+		height: 4px;
+		background: var(--third-text-color);
+		border-radius: 2px;
+	}
+}
+
+.nav__item {
+	position: relative;
+}
+
+.contact {
+	display: none;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-direction: column;
+	}
+	@media screen and (min-width: 1200px) {
+		flex-direction: row;
+		gap: 30px;
+		margin-left: auto;
+	}
+}
+
+.contact__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: calc(16 / 14);
+	letter-spacing: 0.02em;
+	padding: 10px 0;
+	@media screen and (min-width: 1200px) {
+		padding: 32px 0;
+	}
+	color: var(--primary-text-color);
+
+	transition: color var(--anim-main);
+
+	&:hover,
+	&link:focus {
+		color: var(--third-text-color);
+	}
+}
+
+.contact__icon {
+	fill: currentColor;
+}
