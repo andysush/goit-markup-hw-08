@@ -41,6 +41,10 @@ img {
   height: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -108,9 +112,6 @@ img {
   bottom: 30px;
   right: 30px;
   fill: var(--third-background-color);
-}
-
-.up__button .up__arrow {
   width: 60px;
   height: 60px;
   background: var(--icons-background-color);
@@ -120,8 +121,9 @@ img {
   border-radius: 50%;
   -webkit-transition: var(--anim-main);
   transition: var(--anim-main);
+  opacity: 0;
 }
-.up__button .up__arrow:hover, .up__button .up__arrow:focus {
+.up__arrow:hover, .up__arrow:focus {
   background: var(--third-text-color);
   -webkit-box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
@@ -954,8 +956,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
-    height: 581px;
+    min-width: 528px;
+    min-height: 581px;
   }
 }
 .backdrop--is-hidden .modal {

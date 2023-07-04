@@ -1,18 +1,13 @@
-function backToTop() {
-	let button = $(".up__button");
+const scrollBtn = document.querySelector(".up__arrow");
 
-	$(window).on("scroll", () => {
-		if ($(this).scrollTop() >= 300) {
-			button.fadeIn();
-		} else {
-			button.fadeOut();
-		}
-	});
+window.onscroll = () => {
+	if (window.scrollY > 600) {
+		scrollBtn.style = "opacity:1";
+	} else if (window.scrollY < 500) {
+		scrollBtn.style = "opacity:0";
+	}
+};
 
-	button.on("click", (e) => {
-		e.preventDefault();
-		$("html").animate({ scrollTop: 0 }, 1000);
-	});
-}
-
-backToTop();
+scrollBtn.onClick = () => {
+	window.scrollTo(0, 0);
+};
