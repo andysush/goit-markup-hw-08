@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contacts</title>
+		<link rel="stylesheet" href="./css/modern-normalize.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/main.min.css" />
+	</head>
+	<body>
+		<!-- HEADER -->
+		<header class="header">
+			<div class="header__container">
+				<a href="./index.html" class="logo"
+					>Web<span class="logo__header">Studio</span>
+				</a>
+				<button
+					class="menu-toggle js-open-menu"
+					aria-expanded="false"
+					aria-controls="mobile-menu"
+				>
+					<svg class="mob__open" width="40px" height="40px">
+						<use href="./images/icons.svg#icon-mob_open"></use>
+					</svg>
+				</button>
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a class="nav__link" href="./index.html">Студія</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="./portfolio.html">Портфоліо</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link nav__link--current" href="./contacts.html"
+								>Контакти</a
+							>
+						</li>
+					</ul>
+				</nav>
+				<ul class="contact">
+					<li>
+						<a class="contact__link" href="mailto:info@devstudio.com">
+							<svg class="contact__icon" width="16" height="12">
+								<use href="./images/icons.svg#icon-mail"></use>
+							</svg>
+							info@devstudio.com</a
+						>
+					</li>
+					<li>
+						<a class="contact__link" href="tel:+380961111111">
+							<svg class="contact__icon" width="10" height="16">
+								<use href="./images/icons.svg#icon-smartphone"></use>
+							</svg>
+							+38 096 111 11 11
+						</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<!--MAIN-->
+		<main>
+			<section class="contacts-main">
+				<div class="contacts-container">
+					<div class="contacts-form">
+						<strong class="modal__label"
+							>Залиште свої дані, ми вам передзвонимо</strong
+						>
+						<form class="modal-form" name="modal_form">
+							<div class="modal-form__item" role="group">
+								<label class="modal-form__label" for="user_name"
+									>Ім'я
+									<span class="modal-form__wrapper">
+										<input
+											class="modal-form__field"
+											type="text"
+											name="user_name"
+											id="user_name"
+										/>
+										<svg class="modal-form__icon" width="18" height="18">
+											<use href="./images/icons.svg#icon-person-modal"></use>
+										</svg>
+									</span>
+								</label>
+								<label class="modal-form__label" for="user_phone"
+									>Телефон
+									<span class="modal-form__wrapper">
+										<input
+											class="modal-form__field"
+											type="tel"
+											name="user_phone"
+											id="user_phone"
+										/>
+										<svg class="modal-form__icon" width="18" height="18">
+											<use href="./images/icons.svg#icon-phone-modal"></use>
+										</svg>
+									</span>
+								</label>
+								<label class="modal-form__label" for="user_email"
+									>Пошта
+									<span class="modal-form__wrapper">
+										<input
+											class="modal-form__field"
+											type="email"
+											name="user_email"
+											id="user_email"
+										/>
+										<svg class="modal-form__icon" width="18" height="18">
+											<use href="./images/icons.svg#icon-email-modal"></use>
+										</svg>
+									</span>
+								</label>
+								<label class="modal-form__label"
+									>Коментар
+									<textarea
+										class="modal-form__text"
+										name="user_text"
+										rows="9"
+										placeholder="Введіть текст"
+									></textarea>
+								</label>
+							</div>
+							<div class="modal-form__group" role="group">
+								<input
+									class="modal-form__checkbox"
+									id="user_agreement"
+									type="checkbox"
+								/>
+								<label class="modal-form__agree" for="user_agreement"
+									>Погоджуюся з розсилкою та приймаю
+									<a class="modal-form__link" href="">Умови договору</a></label
+								>
+							</div>
+							<button class="modal-form__button" type="submit">
+								Відправити
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- FOOTER -->
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__credentials">
+					<div>
+						<a href="./index.html" class="logo"
+							>Web<span class="logo__footer">Studio</span></a
+						>
+						<address class="address">
+							<ul class="address__list">
+								<li>
+									<a
+										class="address__link"
+										href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+										target="_blank"
+										rel="noopener noreferrer nofollow"
+										>м. Київ, б-р Лесі Украінки, 26</a
+									>
+								</li>
+								<li>
+									<a class="address__links" href="mailto:info@devstudio.com"
+										>info@devstudio.com</a
+									>
+								</li>
+								<li>
+									<a class="address__links" href="tel:+380961111111"
+										>+38 096 111 11 11</a
+									>
+								</li>
+							</ul>
+						</address>
+					</div>
+					<div class="group">
+						<p class="group__text">Приєднуйтесь</p>
+						<ul class="group__list">
+							<li class="group__item">
+								<a
+									class="group__link"
+									href="https://www.instagram.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<svg class="group__icon" width="20" height="20">
+										<use href="./images/icons.svg#icon-instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="group__item">
+								<a
+									class="group__link"
+									href="https://twitter.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<svg class="group__icon" width="20" height="20">
+										<use href="./images/icons.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="group__item">
+								<a
+									class="group__link"
+									href="https://www.facebook.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<svg class="group__icon" width="20" height="20">
+										<use href="./images/icons.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="group__item">
+								<a
+									class="group__link"
+									href="https://www.linkedin.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<svg class="group__icon" width="20" height="20">
+										<use href="./images/icons.svg#icon-linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="pidpyska">
+					<p class="pidpyska__text">Підпишіться на розсилку</p>
+					<form class="pidpyska__form" name="pidpyska-form">
+						<label class="pidpyska__label">
+							<input
+								class="pidpyska__field"
+								type="email"
+								name="user_email"
+								placeholder="E-mail"
+							/>
+						</label>
+						<button class="pidpyska__button" type="submit">
+							Підписатися
+							<svg class="pidpyska__icon" width="24" height="24">
+								<use href="./images/icons.svg#icon-send"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+			</div>
+		</footer>
+		<!-- MOBILE MENU -->
+		<div class="menu-container js-menu-container" id="mobile-menu">
+			<button class="menu-toggle menu__close js-close-menu">
+				<svg class="menu__icon" width="40px" height="40px">
+					<use href="./images/icons.svg#icon-mob_close"></use>
+				</svg>
+			</button>
+
+			<ul class="menu-list">
+				<li class="menu-list__item">
+					<a class="menu-list__link" href="./index.html">Студія</a>
+				</li>
+				<li class="menu-list__item menu-list__item--current">
+					<a class="menu-list__link" href="./portfolio.html">Портфоліо</a>
+				</li>
+				<li class="menu-list__item">
+					<a class="menu-list__link" href="#">Контакти</a>
+				</li>
+			</ul>
+			<ul class="menu-contact">
+				<li class="menu-contact__item">
+					<a class="menu-contact__link" href="tel:+380961111111"
+						>+38 096 111 11 11</a
+					>
+				</li>
+				<li class="menu-contact__items">
+					<a class="menu-contact__link" href="mailto:info@devstudio.com"
+						>info@devstudio.com</a
+					>
+				</li>
+			</ul>
+			<ul class="menu-social">
+				<li class="menu-social__item">
+					<a
+						class="menu-social__link"
+						href="https://www.instagram.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Instagram</a
+					>
+				</li>
+				<li class="menu-social__item">
+					<a
+						class="menu-social__link"
+						href="https://twitter.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Twitter</a
+					>
+				</li>
+				<li class="menu-social__item">
+					<a
+						class="menu-social__link"
+						href="https://www.facebook.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Facebook</a
+					>
+				</li>
+				<li class="menu-social__item">
+					<a
+						class="menu-social__link"
+						href="https://www.linkedin.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+						>LinkedIn</a
+					>
+				</li>
+			</ul>
+		</div>
+		<a href="#"
+			><svg class="up__arrow">
+				<use href="./images/icons.svg#icon-up"></use>
+			</svg>
+		</a>
+
+		<script src="./js/filter.js"></script>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		></script>
+		<script defer src="./js/mobile-menu.js"></script>
+		<script src="./js/up-button.js"></script>
+	</body>
+</html>
