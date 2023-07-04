@@ -1,0 +1,12 @@
+.asda {
+  min-width: 280px;
+  max-width: 335px;
+  max-height: 80vh;
+  background-color: var(--white-color);
+}
+@media screen and (min-width: 1200px) {
+  .asda {
+    min-width: 528px;
+    min-height: 581px;
+  }
+}/*# sourceMappingURL=contacts.css.map */
