@@ -1,71 +1,23 @@
-.backdrop {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	min-width: 320px;
-	background-color: rgba(0, 0, 0, 0.2);
-
-	transition: opacity var(--anim-main), visibility var(--anim-main);
-
-	&--is-hidden {
-		opacity: 0;
-		visibility: hidden;
-		pointer-events: none;
+.contacts-container {
+	@include section(60px, 60px);
+	@media screen and (min-width: 1200px) {
+		@include section(94px, 94px);
 	}
+	@extend %container;
 }
 
-.modal {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	padding: 40px;
-	transform: translateX(-50%) translateY(-50%) scale(1);
+.contacts-form {
 	min-width: 280px;
 	max-width: 335px;
-	max-height: 80vh;
+	margin: 0 auto;
 	@media screen and (min-width: 1200px) {
 		min-width: 528px;
 		min-height: 581px;
 	}
 	background-color: var(--white-color);
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-		0px 2px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
-
-	transition: transform var(--anim-main), opasity var(--anim-main);
-
-	.backdrop--is-hidden & {
-		opacity: 0;
-		transform: translateX(-50%) translateY(-50%) scale(0.5);
-	}
 }
 
-.modal__btn {
-	position: absolute;
-	top: 8px;
-	right: 8px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
-	width: 30px;
-	height: 30px;
-	background-color: transparent;
-	border-radius: 50%;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	cursor: pointer;
-
-	transition: fill var(--anim-main);
-
-	&:hover,
-	&:focus {
-		fill: var(--third-text-color);
-	}
-}
-
-.modal__label {
+.contacts__label {
 	display: block;
 	text-align: center;
 	margin-bottom: 12px;
@@ -76,7 +28,7 @@
 	color: var(--secondary-text-color);
 }
 
-.modal-form__label {
+.contacts-form__label {
 	display: block;
 	margin-bottom: 10px;
 	font-size: 12px;
@@ -85,11 +37,11 @@
 	color: var(--primary-text-color);
 }
 
-.modal-form__wrapper {
+.contacts-form__wrapper {
 	position: relative;
 }
 
-.modal-form__field {
+.contacts-form__field {
 	width: 100%;
 	height: 40px;
 	padding-left: 42px;
@@ -97,18 +49,17 @@
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
 	transition: border-color var(--anim-main);
-
 	&:focus {
 		border-color: var(--third-text-color);
 		outline: transparent;
 	}
 }
 
-.modal-form__item {
+.contacts-form__item {
 	margin-bottom: 20px;
 }
 
-.modal-form__icon {
+.contacts-form__icon {
 	position: absolute;
 	top: 50%;
 	left: 12px;
@@ -120,7 +71,7 @@
 	}
 }
 
-.modal-form__text {
+.contacts-form__text {
 	display: block;
 	width: 100%;
 	height: 120px;
@@ -142,8 +93,7 @@
 		outline: transparent;
 	}
 }
-
-.modal-form__group {
+.contacts-form__group {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -151,7 +101,7 @@
 	margin-bottom: 30px;
 }
 
-.modal-form__agree {
+.contacts-form__agree {
 	font-size: 14px;
 	line-height: calc(24 / 14);
 	letter-spacing: 0.03em;
@@ -159,12 +109,12 @@
 	user-select: none;
 }
 
-.modal-form__link {
+.contacts-form__link {
 	color: var(--third-text-color);
 	text-underline-position: under;
 }
 
-.modal-form__checkbox {
+.contacts-form__checkbox {
 	appearance: none;
 	width: 16px;
 	height: 15px;
@@ -185,7 +135,7 @@
 	}
 }
 
-.modal-form__button {
+.contacts-form__button {
 	display: block;
 	margin: auto;
 	width: 200px;
@@ -205,4 +155,18 @@
 	&:focus {
 		background-color: var(--button-active-color);
 	}
+}
+
+.contacts-map {
+	min-width: 280px;
+	max-width: 335px;
+	// margin: auto;
+	@media screen and (min-width: 1200px) {
+		max-width: 528px;
+		min-height: 581px;
+	}
+}
+
+.contacts-map__iframe {
+	margin: 0 auto;
 }
