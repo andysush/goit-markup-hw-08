@@ -162,7 +162,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -309,7 +309,7 @@ body {
 .hero {
   max-width: 1600px;
   margin: 0 auto;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -328,6 +328,7 @@ body {
 }
 @media screen and (min-width: 481px) {
   .hero {
+    width: 480px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/img_tab@1x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/img_tab@1x.jpg);
   }
@@ -1632,16 +1633,49 @@ body {
 }
 
 .contacts-map {
-  min-width: 280px;
-  max-width: 335px;
-}
-@media screen and (min-width: 1200px) {
-  .contacts-map {
-    max-width: 528px;
-    min-height: 581px;
-  }
+  width: 100%;
+  background: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  padding: 0px;
+  display: none;
 }
 
-.contacts-map__iframe {
-  margin: 0 auto;
+.contacts-map__mob {
+  width: 95%;
+  background: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0px;
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  .contacts-map__mob .contacts-map {
+    width: 100%;
+    background: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    padding: 0px;
+    display: block;
+  }
+  .contacts-map__mob .contacts-map__mob {
+    width: 95%;
+    background: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
