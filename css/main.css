@@ -1654,8 +1654,9 @@ body {
   padding: 0px;
   display: block;
 }
+
 @media screen and (min-width: 1200px) {
-  .contacts-map__mob .contacts-map {
+  .contacts-map {
     width: 100%;
     background: none;
     text-align: center;
@@ -1666,7 +1667,7 @@ body {
     padding: 0px;
     display: block;
   }
-  .contacts-map__mob .contacts-map__mob {
+  .contacts-map__mob {
     width: 95%;
     background: none;
     text-align: center;
